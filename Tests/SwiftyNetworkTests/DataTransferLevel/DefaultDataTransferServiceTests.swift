@@ -9,6 +9,7 @@ import XCTest
 @testable import SwiftyNetwork
 
 final class DefaultDataTransferServiceTests: XCTestCase {
+    
     func test_request_endpointCreateRequestInvoked() throws {
         let config: NetworkConfig = .dummy
         let sut = makeSUT(config: config)
@@ -238,6 +239,7 @@ final class DefaultDataTransferServiceTests: XCTestCase {
 }
 
 private final class SpyNetworkService: NetworkService {
+    
     var requestCalledSpy = false
     var requestSpy: URLRequest?
     
@@ -260,7 +262,9 @@ private final class SpyNetworkService: NetworkService {
 }
 
 private final class SpyEndpoint<R>: ResponseRequestable {
+    
     typealias Response = R
+    
     let path: String
     let queries: Encodable?
     let method: HTTPMethod

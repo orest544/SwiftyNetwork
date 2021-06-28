@@ -12,6 +12,7 @@ public protocol DataTransferLogger {
 }
 
 public final class DefaultDataTransferLogger: DataTransferLogger {
+    
     public init() { }
     
     public func log(decodingError: Error) {

@@ -9,6 +9,7 @@ import XCTest
 @testable import SwiftyNetwork
 
 final class EndpointTests: XCTestCase {
+    
     func test_endpoint_initialState() {
         let sut = makeSUT()
         

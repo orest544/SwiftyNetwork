@@ -14,6 +14,7 @@ public protocol DownloadSessionManager {
 }
 
 public final class DefaultDownloadSessionManager: DownloadSessionManager {
+    
     private let session: URLSession
     
     public init(session: URLSession = .shared) {

@@ -9,6 +9,7 @@ import Foundation
 @testable import SwiftyNetwork
 
 final class SpyRequestEncoder: RequestEncoder {
+    
     var encodeCalledSpy = false
     var encodeModelSpy: Any?
     

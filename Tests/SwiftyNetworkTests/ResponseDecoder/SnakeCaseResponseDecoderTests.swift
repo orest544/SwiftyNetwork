@@ -9,6 +9,7 @@ import XCTest
 @testable import SwiftyNetwork
 
 final class SnakeCaseResponseDecoderTests: XCTestCase {
+    
     func test_decode_snakeCaseToCamel() throws {
         let sut = SnakeCaseResponseDecoder()
         let jsonData = try """

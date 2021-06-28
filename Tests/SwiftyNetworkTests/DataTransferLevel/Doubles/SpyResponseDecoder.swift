@@ -9,6 +9,7 @@ import Foundation
 @testable import SwiftyNetwork
 
 final class SpyResponseDecoder: ResponseDecoder {
+    
     var decodeCalledSpy = false
     var decodeDataSpy: Data?
     private let decodedResponseStub: DummyResponseDTO

@@ -12,6 +12,7 @@ public protocol ResponseDecoder {
 }
 
 public struct DefaultResponseDecoder: ResponseDecoder {
+    
     public init() { }
     
     private let decoder: JSONDecoder = .init()
@@ -22,6 +23,7 @@ public struct DefaultResponseDecoder: ResponseDecoder {
 }
 
 public struct SnakeCaseResponseDecoder: ResponseDecoder {
+    
     public init() { }
     
     private let decoder: JSONDecoder = .makeSnakeCaseDecoder()

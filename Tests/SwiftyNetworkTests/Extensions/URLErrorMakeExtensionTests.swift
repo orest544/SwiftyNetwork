@@ -9,6 +9,7 @@ import XCTest
 @testable import SwiftyNetwork
 
 final class URLErrorMakeExtensionTests: XCTestCase {
+    
     func test_makeTypeErasedURLError_madeURLError() throws {
         let error: Error = URLError(.cancelled)
         let sut = makeSUT(error: error)

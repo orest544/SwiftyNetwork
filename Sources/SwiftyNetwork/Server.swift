@@ -13,6 +13,7 @@ public enum ServerScheme: String, Equatable {
 }
 
 public struct Server: Equatable {
+    
     public let scheme: ServerScheme
     public let host: String
     

@@ -12,6 +12,7 @@ public protocol RequestEncoder {
 }
 
 public struct DefaultRequestEncoder: RequestEncoder {
+    
     public init() { }
     
     private let encoder: JSONEncoder = .init()
@@ -22,6 +23,7 @@ public struct DefaultRequestEncoder: RequestEncoder {
 }
 
 public struct SnakeCaseRequestEncoder: RequestEncoder {
+    
     public init() { }
     
     private let encoder: JSONEncoder = .makeSnakeCaseEncoder()

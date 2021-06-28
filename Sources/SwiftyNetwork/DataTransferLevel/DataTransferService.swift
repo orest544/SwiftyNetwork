@@ -32,6 +32,7 @@ public protocol DataTransferService {
 }
 
 public final class DefaultDataTransferService: DataTransferService {
+    
     private let config: NetworkConfig
     private let networkService: NetworkService
     private let logger: DataTransferLogger
