@@ -21,7 +21,7 @@ final class ConfigurationsTests: XCTestCase {
     }
 }
 
-private struct StubPropertyListReader: PropertyListReading {
+private struct StubPropertyListReader: PropertyListReader {
     
     private let readValueStub: String
     
