@@ -13,6 +13,7 @@ public protocol ResponseRequestable: Requestable {
 }
 
 public final class Endpoint<R>: ResponseRequestable {
+    
     public typealias Response = R
     
     public let path: String

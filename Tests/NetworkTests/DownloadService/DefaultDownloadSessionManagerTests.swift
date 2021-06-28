@@ -10,6 +10,7 @@ import XCTest
 import Network
 
 final class DefaultDownloadSessionManagerTests: XCTestCase {
+    
     func test_downloadWithURL_sessionDownloadTaskWithThisURL() {
         let url: URL = .dummy
         let session = SpySession()
@@ -69,6 +70,7 @@ final class DefaultDownloadSessionManagerTests: XCTestCase {
 }
 
 private final class SpyDownloadTask: URLSessionDownloadTask {
+    
     var spyResumeInvoked = false
     
     override init() { }
@@ -79,6 +81,7 @@ private final class SpyDownloadTask: URLSessionDownloadTask {
 }
 
 private final class SpySession: URLSession {
+    
     var spyDownloadTaskURL: URL?
     
     override init() { }
@@ -93,6 +96,7 @@ private final class SpySession: URLSession {
 }
 
 private final class StubSession: URLSession {
+    
     private let completionStub: CompletionStub?
     private let stubTask: URLSessionDownloadTask
     

@@ -15,6 +15,7 @@ public protocol NetworkSessionManager {
 }
 
 public final class DefaultNetworkSessionManager: NetworkSessionManager {
+    
     private let session: URLSession
     
     public init(session: URLSession = .shared) {

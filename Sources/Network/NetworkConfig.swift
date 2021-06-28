@@ -8,6 +8,7 @@
 import Foundation
 
 public struct NetworkConfig: Equatable {
+    
     public let server: Server
     public let headers: [String: String]
     

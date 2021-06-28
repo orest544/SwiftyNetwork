@@ -9,6 +9,7 @@ import XCTest
 @testable import Network
 
 final class DefaultNetworkTransportServiceTests: XCTestCase {
+    
     func test_request_sessionRequestInvoked() throws {
         let expectedCancellable = DummyCancellable()
         let request: URLRequest = .dummy
@@ -84,6 +85,7 @@ final class DefaultNetworkTransportServiceTests: XCTestCase {
 }
 
 private final class SpyNetworkSessionManager: NetworkSessionManager {
+    
     var requestCalledSpy = false
     var requestSpy: URLRequest?
 

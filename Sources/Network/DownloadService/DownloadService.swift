@@ -15,6 +15,7 @@ public protocol DownloadService {
 }
 
 public final class DefaultDownloadService: DownloadService {
+    
     private let sessionManager: DownloadSessionManager
     
     public init(sessionManager: DownloadSessionManager = DefaultDownloadSessionManager()) {

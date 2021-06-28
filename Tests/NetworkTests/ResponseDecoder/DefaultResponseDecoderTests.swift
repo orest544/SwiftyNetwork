@@ -9,6 +9,7 @@ import XCTest
 @testable import Network
 
 final class DefaultResponseDecoderTests: XCTestCase {
+    
     func test_decode_useCodingKeys() throws {
         let sut = DefaultResponseDecoder()
         let jsonData = try """
@@ -26,6 +27,7 @@ final class DefaultResponseDecoderTests: XCTestCase {
 }
 
 private struct DummyDecodable: Decodable, Equatable {
+    
     let id: Int
     let fullName: String
     

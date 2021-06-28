@@ -9,6 +9,7 @@ import XCTest
 import Network
 
 final class DefaultDownloadServiceTests: XCTestCase {
+    
     func test_downloadWithURL_sessionManagerDownloadWithThisURL() {
         let url: URL = .dummy
         let sessionManager = SpyDownloadSessionManager()
@@ -76,6 +77,7 @@ final class DefaultDownloadServiceTests: XCTestCase {
 }
 
 private final class SpyDownloadSessionManager: DownloadSessionManager {
+    
     var spyDownloadURL: URL?
     
     func download(url: URL, completion: @escaping URLSessionDownloadTaskCompletion) -> URLSessionDownloadTask {
@@ -85,6 +87,7 @@ private final class SpyDownloadSessionManager: DownloadSessionManager {
 }
 
 private final class StubDownloadSessionManager: DownloadSessionManager {
+    
     private let stubTask: URLSessionDownloadTask
     private let stubError: Error?
     private let stubURL: URL?

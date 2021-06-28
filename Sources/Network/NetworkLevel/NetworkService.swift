@@ -15,6 +15,7 @@ public protocol NetworkService {
 }
 
 public final class DefaultNetworkService: NetworkService {
+    
     private let transportService: NetworkTransportService
     private let logger: NetworkLogger
     

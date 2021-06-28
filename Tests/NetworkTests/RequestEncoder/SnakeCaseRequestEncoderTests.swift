@@ -9,6 +9,7 @@ import XCTest
 @testable import Network
 
 final class SnakeCaseRequestEncoderTests: XCTestCase {
+    
     func test_encode_camelToSnakeCase() throws {
         let sut = SnakeCaseRequestEncoder()
         let encodable = DummyEncodable(id: 1, fullName: "Swift")
@@ -23,6 +24,7 @@ final class SnakeCaseRequestEncoderTests: XCTestCase {
 }
 
 private struct DummyEncodable: Encodable, Equatable {
+    
     let id: Int
     let fullName: String
 }

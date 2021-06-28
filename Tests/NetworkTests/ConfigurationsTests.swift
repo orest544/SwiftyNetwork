@@ -2,6 +2,7 @@ import XCTest
 @testable import Network
 
 final class ConfigurationsTests: XCTestCase {
+    
     func test_baseHost_getBaseURL() {
         let expectedHost = "example.com"
         let sut = makeSUT(readBaseHost: expectedHost)
@@ -21,6 +22,7 @@ final class ConfigurationsTests: XCTestCase {
 }
 
 private struct StubPropertyListReader: PropertyListReading {
+    
     private let readValueStub: String
     
     init(readValue: String) {

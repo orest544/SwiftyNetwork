@@ -8,6 +8,7 @@
 import Foundation
 
 public final class NetworkConfigurations {
+    
     enum PropertyListKeys: String {
         case apiBaseHost = "APIBaseHost"
     }
@@ -16,9 +17,9 @@ public final class NetworkConfigurations {
         return read(key: .apiBaseHost)
     }()
     
-    private let infoReader: PropertyListReading
+    private let infoReader: PropertyListReader
     
-    public init(infoReader: PropertyListReading = PropertyListReader()) {
+    public init(infoReader: PropertyListReader = DefaultPropertyListReader()) {
         self.infoReader = infoReader
     }
     
@@ -32,11 +33,12 @@ public final class NetworkConfigurations {
     }
 }
 
-public protocol PropertyListReading {
+public protocol PropertyListReader {
     func read<T>(key: String) -> T?
 }
 
-public struct PropertyListReader: PropertyListReading {
+public struct DefaultPropertyListReader: PropertyListReader {
+    
     public init() { }
     
     public func read<T>(key: String) -> T? {

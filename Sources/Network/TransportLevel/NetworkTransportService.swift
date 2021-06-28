@@ -15,6 +15,7 @@ public protocol NetworkTransportService {
 }
 
 public final class DefaultNetworkTransportService: NetworkTransportService {
+    
     private let sessionManager: NetworkSessionManager
     
     public init(sessionManager: NetworkSessionManager = DefaultNetworkSessionManager()) {

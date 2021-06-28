@@ -13,6 +13,7 @@ public protocol NetworkLogger {
 }
 
 public final class DefaultNetworkLogger: NetworkLogger {
+    
     public init() { }
     
     public func log(request: URLRequest) {
