@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Network
+@testable import SwiftyNetwork
 
 final class SpyResponseDecoder: ResponseDecoder {
     

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import Network
+@testable import SwiftyNetwork
 
 struct DummyCancellable: NetworkCancellable, Equatable {
     func cancel() { }

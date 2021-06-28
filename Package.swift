@@ -3,19 +3,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "Network",
+    name: "SwiftyNetwork",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "Network",
-            targets: ["Network"]
+            name: "SwiftyNetwork",
+            targets: ["SwiftyNetwork"]
         )
     ],
     targets: [
-        .target(name: "Network"),
+        .target(name: "SwiftyNetwork"),
         .testTarget(
-            name: "NetworkTests",
-            dependencies: ["Network"]
+            name: "SwiftyNetworkTests",
+            dependencies: ["SwiftyNetwork"]
         )
     ]
 )
