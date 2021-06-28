@@ -1,19 +1,19 @@
 //
-//  DefaultRequestEncoderTests.swift
+//  SnakeCaseRequestEncoderTests.swift
 //  
 //
 //  Created by Orest Patlyka on 22.02.2021.
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
-final class DefaultRequestEncoderTests: XCTestCase {
-    func test_encode_useCodingKeys() throws {
-        let sut = DefaultRequestEncoder()
+final class SnakeCaseRequestEncoderTests: XCTestCase {
+    func test_encode_camelToSnakeCase() throws {
+        let sut = SnakeCaseRequestEncoder()
         let encodable = DummyEncodable(id: 1, fullName: "Swift")
         let expectedJSONData = try """
-            {"full_name":"Swift","identifier":1}
+            {"id":1,"full_name":"Swift"}
             """.jsonData()
         
         let encodedData = try sut.encode(encodable)
@@ -25,9 +25,4 @@ final class DefaultRequestEncoderTests: XCTestCase {
 private struct DummyEncodable: Encodable, Equatable {
     let id: Int
     let fullName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "identifier"
-        case fullName = "full_name"
-    }
 }

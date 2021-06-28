@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_12.2.app
+      
+    - name: Generate project
+      run: swift package generate-xcodeproj
+    
+    - name: Run unit tests
+      run: xcodebuild clean test
+        -scheme "SwiftyNetwork-Package"
+        -destination 'name=iPhone 12'

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
 final class DefaultDataTransferServiceTests: XCTestCase {
     func test_request_endpointCreateRequestInvoked() throws {

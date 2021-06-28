@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
 final class EndpointTests: XCTestCase {
     func test_endpoint_initialState() {

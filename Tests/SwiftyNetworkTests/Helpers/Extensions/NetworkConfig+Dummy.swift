@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Network
+import SwiftyNetwork
 
 extension Server {
     static var dummy: Server {

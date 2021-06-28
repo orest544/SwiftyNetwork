@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
 final class DefaultNetworkServiceTests: XCTestCase {
     func test_request_transportServiceRequestInvoked() throws {

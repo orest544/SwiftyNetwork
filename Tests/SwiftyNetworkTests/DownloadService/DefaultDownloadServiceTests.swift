@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Network
+import SwiftyNetwork
 
 final class DefaultDownloadServiceTests: XCTestCase {
     func test_downloadWithURL_sessionManagerDownloadWithThisURL() {
