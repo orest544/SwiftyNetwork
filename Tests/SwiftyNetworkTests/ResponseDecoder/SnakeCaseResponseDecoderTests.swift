@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
 final class SnakeCaseResponseDecoderTests: XCTestCase {
     func test_decode_snakeCaseToCamel() throws {

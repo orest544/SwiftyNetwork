@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Network
+@testable import SwiftyNetwork
 
 final class URLErrorMakeExtensionTests: XCTestCase {
     func test_makeTypeErasedURLError_madeURLError() throws {
